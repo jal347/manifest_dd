@@ -1,7 +1,6 @@
-FROM praqma/network-multitool:latest
+FROM alpine:latest
 LABEL "path"="/tmp/annotations.zip"
-LABEL "dump_command"="/usr/bin/wget https://s3.pgkb.org/data/annotations.zip -O /tmp/annotations.zip"
-LABEL keep_container="true"
+LABEL "dump_command"="/usr/bin/wget https://biothings-data.s3.us-west-2.amazonaws.com/docker_test/annotations.zip -O /tmp/annotations.zip"
+LABEL keep_container=true
 LABEL desc=test
 LABEL container_name=mydocker
-
